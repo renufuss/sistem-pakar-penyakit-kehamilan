@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 29, 2022 at 04:47 AM
+-- Generation Time: Dec 29, 2022 at 05:27 AM
 -- Server version: 8.0.27
 -- PHP Version: 8.0.13
 
@@ -42,11 +42,11 @@ CREATE TABLE IF NOT EXISTS `disease` (
 --
 
 INSERT INTO `disease` (`id`, `name`, `key`, `description`, `url`) VALUES
-(1, 'Abortus (keluarnya janin sebelum masa visibilitas)', 'P1', 'Keguguran adalah kematian janin dalam kandungan sebelum usia kehamilan mencapai 20 minggu. Umumnya, abortus terjadi karena terdapat kesalahan pada kehamilan atau kesehatan ibu. Namun, 2 dari 3 abortus terjadi karena adanya kelainan pada kromosom janin yang membuat ia tidak bisa tumbuh dan akhirnya gugur dari kandungan.', 'https://www.alodokter.com/kenali-macam-macam-abortus-yang-bisa-terjadi-selama-kehamilan'),
-(2, 'Hamil ekstrauteri ektopik terganggu (hamil yang berkembang diluar rahim)', 'P2', 'Kehamilan ektopik adalah kehamilan yang terjadi di luar rahim. Tergantung lokasi menempelnya sel telur, gejala kehamilan ektopik dapat menyerupai gejala pada penyakit usus buntu. Apabila tidak segera ditangani, kehamilan ektopik dapat berakibat fatal bagi ibu', 'https://www.alodokter.com/kehamilan-ektopik'),
-(3, 'Solusio plasenta (lepasnya plasenta dari dinding rahim)', 'P3', 'Solusio plasenta adalah komplikasi kehamilan ketika plasenta terlepas dari dinding rahim sebelum proses persalinan. Kondisi ini dapat menyebabkan pasokan nutrisi dan oksigen pada bayi menurun atau terhambat.', 'https://www.alodokter.com/solusio-plasenta'),
-(4, 'Preekslampsia berat (suatu komplikasi ditandai dengan hipertensi)', 'P4', 'Preeklamsia adalah peningkatan tekanan darah dan kelebihan protein dalam urine yang terjadi setelah usia kehamilan lebih dari 20 minggu. Bila tidak segera ditangani, preeklamsia bisa menyebabkan komplikasi yang berbahaya bagi ibu dan janin.', 'https://www.alodokter.com/preeklamsia'),
-(5, 'Rupture uteri (robeknya dinding rahim)', 'P5', 'Ruptur uteri adalah rahim robek yang sering kali terjadi akibat komplikasi saat persalinan normal. Kondisi ini terjadi terutama pada wanita yang pernah menjalani operasi di area rahim. Ruptur uteri merupakan kondisi gawat darurat, karena dapat berakibat fatal baik pada ibu hamil maupun janinnya.', 'https://www.alodokter.com/ruptur-uteri'),
+(1, 'Abortus', 'P1', 'Keguguran adalah kematian janin dalam kandungan sebelum usia kehamilan mencapai 20 minggu. Umumnya, abortus terjadi karena terdapat kesalahan pada kehamilan atau kesehatan ibu. Namun, 2 dari 3 abortus terjadi karena adanya kelainan pada kromosom janin yang membuat ia tidak bisa tumbuh dan akhirnya gugur dari kandungan.', 'https://www.alodokter.com/kenali-macam-macam-abortus-yang-bisa-terjadi-selama-kehamilan'),
+(2, 'Hamil ekstrauteri ektopik', 'P2', 'Kehamilan ektopik adalah kehamilan yang terjadi di luar rahim. Tergantung lokasi menempelnya sel telur, gejala kehamilan ektopik dapat menyerupai gejala pada penyakit usus buntu. Apabila tidak segera ditangani, kehamilan ektopik dapat berakibat fatal bagi ibu', 'https://www.alodokter.com/kehamilan-ektopik'),
+(3, 'Solusio plasenta', 'P3', 'Solusio plasenta adalah komplikasi kehamilan ketika plasenta terlepas dari dinding rahim sebelum proses persalinan. Kondisi ini dapat menyebabkan pasokan nutrisi dan oksigen pada bayi menurun atau terhambat.', 'https://www.alodokter.com/solusio-plasenta'),
+(4, 'Preekslampsia berat', 'P4', 'Preeklamsia adalah peningkatan tekanan darah dan kelebihan protein dalam urine yang terjadi setelah usia kehamilan lebih dari 20 minggu. Bila tidak segera ditangani, preeklamsia bisa menyebabkan komplikasi yang berbahaya bagi ibu dan janin.', 'https://www.alodokter.com/preeklamsia'),
+(5, 'Rupture uteri', 'P5', 'Ruptur uteri adalah rahim robek yang sering kali terjadi akibat komplikasi saat persalinan normal. Kondisi ini terjadi terutama pada wanita yang pernah menjalani operasi di area rahim. Ruptur uteri merupakan kondisi gawat darurat, karena dapat berakibat fatal baik pada ibu hamil maupun janinnya.', 'https://www.alodokter.com/ruptur-uteri'),
 (6, 'Penyakit tidak diketahui', 'NULL', 'Kami tidak dapat mengetahui gangguan kehamilan yang anda alami. Cek komunitas alodokter pada tombol berikut untuk bertanya mengenai kondisi anda.', 'https://www.alodokter.com/komunitas/topic/gangguan-kehamilan');
 
 -- --------------------------------------------------------
