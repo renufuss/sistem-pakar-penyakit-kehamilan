@@ -19,24 +19,11 @@ class Disease extends BaseController
         return view('index');
     }
 
-    public function check()
+    public function checkDiseases($symptomUser = [])
     {
         $diseases = $this->DiseaseModel->findAll();
-
-        // symptom input user
-        $inputs = $this->request->getPost();
-        $symptomUser = [];
-        foreach ($inputs as $key => $value) {
-            $isSymptom = ($key != 'name' && $value != 'no' && $key != 'age');
-            if ($isSymptom) {
-                array_push($symptomUser, $key);
-            }
-        }
-
+        // Default Result
         $result = $this->DiseaseModel->where('key', 'NULL')->first();
-
-        //symptom test
-        // loop diseases
         foreach ($diseases as $disease) {
             // symptom disease
             $symptomDisease = [];
@@ -46,14 +33,40 @@ class Disease extends BaseController
             }
             if ($symptomUser == $symptomDisease) {
                 $result = $disease;
-                break;
+                return $result;
             }
         }
+        return $result;
+    }
+
+    public function getSymptomUser($inputs = [])
+    {
+        $symptomUser = [];
+        foreach ($inputs as $key => $value) {
+            $isSymptom = ($key != 'name' && $value != 'no' && $key != 'age');
+            if ($isSymptom) {
+                array_push($symptomUser, $key);
+            }
+        }
+        return $symptomUser;
+    }
+
+    public function result()
+    {
+        // Symptom input user
+        $inputs = $this->request->getPost();
+        $symptomUser = $this->getSymptomUser($inputs);
+
+        //Check Diseases
+        $result = $this->checkDiseases($symptomUser);
+
         $data = [
             'name' => $this->request->getPost('name'),
             'age' => $this->request->getPost('age'),
             'disease' => $result,
         ];
+
+        // Show View
         return view('disease', $data);
     }
 }

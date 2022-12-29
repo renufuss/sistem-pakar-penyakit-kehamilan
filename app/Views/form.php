@@ -1,5 +1,5 @@
               <!--begin::Form-->
-              <form class="my-auto pb-5" action="/check" method="post">
+              <form class="my-auto pb-5" action="<?= base_url(); ?>/result" method="post">
                 <!--begin::Step 1-->
                 <div class="current" data-kt-stepper-element="content">
                   <!--begin::Wrapper-->
